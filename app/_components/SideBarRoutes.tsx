@@ -1,6 +1,8 @@
-"use client"
-import {Aperture, Cctv, LayoutDashboard,ShieldAlert,Users } from "lucide-react"
+"use client";
+
+import { Aperture, Cctv, LayoutDashboard,ShieldAlert, Users } from "lucide-react";
 import NavBarItem from "./navbarItem";
+
 const routes = [
   {
     icon: LayoutDashboard,
@@ -29,9 +31,12 @@ const routes = [
   }
 ]
 
-const NavbarRoutes = () => {
-  return ( <div className="hidden md:flex gap-x-8">
-    {routes.map((route)=>(
+
+const SideBarRoutes = () => {
+
+  return (
+    <div className="flex flex-col w-full pl-12">
+      {routes.map((route)=>(
         <NavBarItem
           key={route.href}
           icon={route.icon}
@@ -39,7 +44,7 @@ const NavbarRoutes = () => {
           href={route.href}
         />
       ))}
-  </div> );
+    </div>);
 }
- 
-export default NavbarRoutes;
+
+export default SideBarRoutes;
