@@ -30,7 +30,7 @@ const routes = [
 ]
 
 const NavbarRoutes = () => {
-  return ( <div className="hidden md:flex gap-x-8">
+  return ( <div className="hidden md:flex gap-x-10">
     {routes.map((route)=>(
         <NavBarItem
           key={route.href}
