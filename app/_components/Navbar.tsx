@@ -9,7 +9,7 @@ import MobileSideBar from "./MobileSideBar";
 const Navbar = () => {
 
   return (
-  <div className="h-full p-4 border-b flex items-center justify-around shadow-sm">
+  <div className="h-full p-4 border-b border-muted-foreground flex items-center justify-around shadow-sm">
     <MobileSideBar/>
     <Link className="flex items-center gap-x-2" href={"/"}>
       <Image src="/icons/logo.svg" alt="desc" width={35} height={35}/>
