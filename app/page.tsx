@@ -48,7 +48,7 @@ const incidents = [
 ];
 
 export default function Home() {
-
+  
   const [selectedIncident, setSelectedIncident] = useState(incidents[0]);
   
   return (

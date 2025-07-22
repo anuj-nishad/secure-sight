@@ -7,7 +7,6 @@ import Link from "next/link";
 import MobileSideBar from "./MobileSideBar";
 
 const Navbar = () => {
-
   return (
   <div className="h-full p-4 border-b border-muted-foreground flex items-center justify-around shadow-sm">
     <MobileSideBar/>
