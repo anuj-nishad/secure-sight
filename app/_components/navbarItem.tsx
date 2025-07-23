@@ -29,16 +29,16 @@ const NavBarItem = ({
     router.push(href)
   }
   return (<button onClick={onClick} type="button" className={cn(
-    "text-white text-sm transition-all hover:text-gray-200",
+    "text-white cursor-pointer font-medium text-sm transition-all hover:text-gray-200",
 
-    isActive && "text-orange-500 hover:text-orange-500"
+    isActive && "text-orange-300 hover:text-orange-300"
   )}>
     <div className="flex items-center gap-x-2 py-4">
       <Icon 
         size={22}
         className={cn(
           "text-white",
-          isActive && "text-orange-500"
+          isActive && "text-orange-300"
         )}
       />
       {label}

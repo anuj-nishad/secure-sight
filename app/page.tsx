@@ -1,68 +1,78 @@
-"use client"
+"use client";
 
+import { useEffect, useState } from "react";
 import IncidentPlayer from "./_components/player/IncidentPlayer";
 import IncidentList from "./_components/player/IncidentList";
-import { useState } from "react";
 
-const incidents = [
-  {
-    id: "1",
-    thumbnailUrl: "/thumbs/thumb1.png",
-    videoUrl: "/clips/cam1.mp4",
-    type: "Unauthorized Access",
-    cameraName: "Entrance Gate",
-    tsStart: "2025-07-22T08:15:00Z",
-    tsEnd: "2025-07-22T08:17:30Z",
-    resolved: false,
-  },
-  {
-    id: "2",
-    thumbnailUrl: "/thumbs/thumb2.png",
-    videoUrl: "/clips/cam2.mp4",
-    type: "Gun Threat",
-    cameraName: "Vault",
-    tsStart: "2025-07-22T10:30:00Z",
-    tsEnd: "2025-07-22T10:32:00Z",
-    resolved: false,
-  },
-  {
-    id: "3",
-    thumbnailUrl: "/thumbs/thumb4.png",
-    videoUrl: "/clips/cam3.mp4",
-    type: "Face Recognised",
-    cameraName: "Parking Lot",
-    tsStart: "2025-07-21T11:12:00Z",
-    tsEnd: "2025-07-21T11:15:00Z",
-    resolved: false,
-  },
-  {
-    id: "4",
-    thumbnailUrl: "/thumbs/thumb3.png",
-    videoUrl: "/clips/cam4.mp4",
-    type: "Face Recognised",
-    cameraName: "Main Area",
-    tsStart: "2025-07-11T11:12:00Z",
-    tsEnd: "2025-07-12T11:15:00Z",
-    resolved: false,
-  },
-];
+interface Incident {
+  id: string;
+  videoUrl: string;
+  thumbnailUrl: string;
+  type: string;
+  cameraName: string;
+  cameraId: string;
+  tsStart: string;
+  tsEnd: string;
+  resolved: boolean;
+}
 
 export default function Home() {
-  
-  const [selectedIncident, setSelectedIncident] = useState(incidents[0]);
-  
-  return (
-    <>
-      <main className="flex flex-col justify-between p-4 gap-4 bg-gray-950 text-white">
-        <div className="grid grid-cols-1 md:grid-cols-[65%_35%] w-full gap-4">
-        <div className="w-auto">
-          <IncidentPlayer incidents={incidents} selectedIncident={selectedIncident}/>
-        </div>
-        <div className="w-auto h-full">
-          <IncidentList incidents={incidents.filter(i => !i.resolved)} onSelect={setSelectedIncident} />
-        </div>
+  const [incidents, setIncidents] = useState<Incident[]>([]);
+  const [cameras, setCameras] = useState([]);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const fetchIncidents = async () => {
+      const res = await fetch("/api/incidents?resolved=false");
+      const data = await res.json();
+      setIncidents(data);
+      if (data.length > 0) {
+        setSelectedId(data[0].id);
+      }
+    };
+
+    const fetchCameras = async () => {
+      const res = await fetch("/api/cameras");
+      const data = await res.json();
+      setCameras(data);
+    };
+
+    Promise.all([fetchIncidents(), fetchCameras()]).finally(() => {
+      setLoading(false);
+    });
+  }, []);
+
+  const selectedIncident = incidents.find((i) => i.id === selectedId);
+
+  if (loading || !selectedIncident) {
+    return (
+      <main className="p-4 md:pr-8 text-white">
+        <div className="py-5 animate-pulse space-y-4">
+          <div className="grid md:grid-cols-[65%_35%] h-[calc(96vh-8rem)] gap-4">
+            <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-lg h-full"></div>
+            <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-lg h-full"></div>
+          </div>
         </div>
       </main>
-    </>
+    );
+  }
+
+  return (
+    <main className="flex flex-col justify-between p-4 md:pr-8 text-white">
+      <div className="md:pt-4 md:pb-10 grid grid-cols-1 md:grid-cols-[65%_35%] h-[calc(100vh-8rem)] w-full gap-4">
+        <div className="w-auto h-full">
+          <IncidentPlayer
+            selectedIncident={selectedIncident}
+            cameras={cameras}
+          />
+        </div>
+        <div className="w-auto overflow-y-hidden">
+          <IncidentList
+            incidents={incidents}
+            onSelect={(incident) => setSelectedId(incident.id)}
+          />
+        </div>
+      </div>
+    </main>
   );
 }
