@@ -8,6 +8,7 @@ async function createCamera() {
       db.camera.create({
         data: {
           name: camera.name,
+          thumbnailUrl: camera.thumbnailUrl,
         },
       })
     )
