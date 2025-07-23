@@ -1,54 +1,46 @@
-interface Incident {
+interface Cameras{
   id: string;
-  videoUrl: string;
+  name: string;
   thumbnailUrl: string;
-  type: string;
-  cameraName: string;
-  tsStart: string;
-  tsEnd: string;
-  resolved: boolean;
 }
 
 interface SelectedIncident{
   id:string;
   videoUrl: string;
+  cameraId: string;
 }
 
-export default function IncidentPlayer({ incidents,selectedIncident }:{
-  incidents: Incident[],
+export default function IncidentPlayer({ selectedIncident,cameras }:{
+  cameras: Cameras[],
   selectedIncident: SelectedIncident;
 }) {
 
   return (
-    <div className="p-4 bg-gray-800 rounded-lg flex flex-col gap-4 text-white">
-      <h2 className="text-xl font-semibold">Incident Player</h2>
-      <video
-        key={selectedIncident.id}
-        src={selectedIncident.videoUrl}
-        muted
-        controls
-        autoPlay
-        loop
-        className="w-full aspect-video rounded-md bg-black"
-      />
+    <div className="p-4 backdrop-blur-md bg-white/8 rounded-lg border border-white/20 flex flex-col gap-4 text-white">
+        <video
+          key={selectedIncident.id}
+          src={selectedIncident.videoUrl}
+          muted
+          controls
+          autoPlay
+          loop
+          className="w-full aspect-video rounded-md bg-black"
+        />
       <div className="flex gap-4 overflow-x-auto">
-        {incidents.map((incident) => (
+        {cameras.map((camera) => (
           <button
-            key={incident.id}
-            className={`border-2 rounded-md overflow-hidden ${
-              incident.id === selectedIncident.id
+            key={camera.id}
+            className={`border-2 rounded-md overflow-hidden bg-white/20 ${
+              camera.id === selectedIncident.cameraId
                 ? "border-blue-500"
                 : "border-transparent"
             }`}
           >
-            <video
-              src={incident.videoUrl}
+            <img
+              src={camera.thumbnailUrl}
               className="w-24 h-14 object-cover"
-              muted
-              autoPlay
-              loop
             />
-            <div className="p-1 text-center text-xs">{incident.cameraName}</div>
+            <div className="p-1 text-center font-semibold text-xs">{camera.name}</div>
           </button>
         ))}
       </div>

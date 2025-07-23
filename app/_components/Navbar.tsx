@@ -16,8 +16,8 @@ const Navbar = () => {
     </Link>
     <NavbarRoutes/>
     <div className="flex items-center gap-x-6">
-      <Bell/>
-      <CircleUserRound/>
+      <Bell className="cursor-pointer"/>
+      <CircleUserRound className="cursor-pointer"/>
     </div>
   </div> );
 }
