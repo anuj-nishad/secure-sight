@@ -9,6 +9,6 @@ export const cameras = [
   },
   {
     name: "Cam 3",
-    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260360/Screenshot_from_2025-07-23_14-10-33_zmnbao.png"
+    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260364/thumb1_nkowiz.png"
   }
 ];
