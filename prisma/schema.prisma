@@ -16,10 +16,13 @@ model Camera{
 
 model Incident{
   id            String @id @default(uuid())
-  cameraId      String
   videoUrl      String
-  thumbnaillUrl String?
+  thumbnailUrl  String?
   type          String?
+
+  cameraId      String
+  location      String
+
   tsStart       DateTime
   tsEnd         DateTime
   resolved      Boolean
