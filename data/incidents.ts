@@ -1,7 +1,7 @@
 
 export const incidents = [
   {
-    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259644/cam2_f4nv1y.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260364/thumb1_nkowiz.png",
     videoUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259693/cam1_lvflnz.mp4",
     type: "Unauthorized Access",
     location: "Entrance Gate",
@@ -11,7 +11,7 @@ export const incidents = [
     resolved: false,
   },
   {
-    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260365/thumb4_fvkjmo.png",
+    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260363/thumb2_rsf8zh.png",
     videoUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259644/cam2_f4nv1y.mp4",
     type: "Gun Threat",
     location: "Vault",
@@ -21,7 +21,7 @@ export const incidents = [
     resolved: false,
   },
   {
-    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260365/thumb4_fvkjmo.png",
+    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260360/Screenshot_from_2025-07-23_14-10-33_zmnbao.png",
     videoUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259636/cam3_cnbbxu.mp4",
     type: "Face Recognised",
     location: "Parking Lot",
@@ -31,8 +31,8 @@ export const incidents = [
     resolved: false,
   },
   {
-    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260365/thumb4_fvkjmo.png",
-    videoUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259644/cam2_f4nv1y.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260359/Screenshot_from_2025-07-22_21-49-18_iaovei.png",
+    videoUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259654/cam4_l6vxx1.mp4",
     type: "Gun Threat",
     location: "Vault",
     cameraName: "Cam 2",
@@ -41,7 +41,7 @@ export const incidents = [
     resolved: false,
   },
   {
-    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260360/Screenshot_from_2025-07-23_14-10-33_zmnbao.png",
+    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260359/Screenshot_from_2025-07-22_21-49-01_ixcgfv.png",
     videoUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259693/cam1_lvflnz.mp4",
     type: "Access Outside Permitted Hours",
     location: "Entrance Gate",
@@ -51,7 +51,7 @@ export const incidents = [
     resolved: false,
   },
   {
-    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260360/Screenshot_from_2025-07-23_14-10-33_zmnbao.png",
+    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260360/Screenshot_from_2025-07-23_14-09-12_xda30y.png",
     videoUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259644/cam2_f4nv1y.mp4",
     type: "Unauthorized Access",
     location: "Vault",
@@ -61,7 +61,7 @@ export const incidents = [
     resolved: false,
   },
   {
-    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260360/Screenshot_from_2025-07-23_14-10-33_zmnbao.png",
+    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260360/Screenshot_from_2025-07-23_14-13-10_gejahe.png",
     videoUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259636/cam3_cnbbxu.mp4",
     type: "Face Recognised",
     location: "Entrance Gate",
@@ -71,8 +71,8 @@ export const incidents = [
     resolved: false,
   },
   {
-    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260360/Screenshot_from_2025-07-23_14-10-33_zmnbao.png",
-    videoUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259644/cam2_f4nv1y.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260361/Screenshot_from_2025-07-23_14-13-19_rgepjo.png",
+    videoUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259654/cam4_l6vxx1.mp4",
     type: "System Hacking",
     location: "Vault", 
     cameraName: "Cam 2",
@@ -81,8 +81,8 @@ export const incidents = [
     resolved: false,
   },
   {
-    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259644/cam2_f4nv1y.mp4",
-    videoUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260360/Screenshot_from_2025-07-23_14-10-33_zmnbao.png",
+    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260362/Screenshot_from_2025-07-23_14-13-49_wjzjph.png",
+    videoUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259644/cam2_f4nv1y.mp4",
     type: "Unauthorized Access",
     location: "Vault",
     cameraName: "Cam 3",
@@ -91,8 +91,8 @@ export const incidents = [
     resolved: false,
   },
   {
-    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260360/Screenshot_from_2025-07-23_14-10-33_zmnbao.png",
-    videoUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259644/cam2_f4nv1y.mp4",
+    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260360/Screenshot_from_2025-07-23_14-11-48_xizvmi.png",
+    videoUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259654/cam4_l6vxx1.mp4",
     type: "Gun Threat",
     location: "Parking Lot",
     cameraName: "Cam 1",
@@ -101,7 +101,7 @@ export const incidents = [
     resolved: false,
   },
   {
-    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260360/Screenshot_from_2025-07-23_14-10-33_zmnbao.png",
+    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260361/Screenshot_from_2025-07-23_14-13-25_dnxubq.png",
     videoUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259636/cam3_cnbbxu.mp4",
     type: "Unauthorized Access",
     location: "Parking Lot",
@@ -111,7 +111,7 @@ export const incidents = [
     resolved: false,
   },
   {
-    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260360/Screenshot_from_2025-07-23_14-10-33_zmnbao.png",
+    thumbnailUrl: "https://res.cloudinary.com/dmoh2tfby/image/upload/v1753260359/Screenshot_from_2025-07-22_21-49-18_iaovei.png",
     videoUrl: "https://res.cloudinary.com/dmoh2tfby/video/upload/v1753259644/cam2_f4nv1y.mp4",
     type: "System Hacking",
     location: "Vault", 
