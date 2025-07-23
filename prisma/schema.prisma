@@ -10,6 +10,7 @@ datasource db {
 model Camera{
   id            String @id @default(uuid())
   name          String
+  thumbnailUrl  String
   incidents     Incident[]
 }
 
