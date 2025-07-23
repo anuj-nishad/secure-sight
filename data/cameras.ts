@@ -1,14 +1,11 @@
 export const cameras = [
   {
-    name: "Camera 1",
-    location: "Entrance Gate"
+    name: "Cam 1",
   },
   {
-    name: "Camera 2",
-    location: "Vault"
+    name: "Cam 2",
   },
   {
-    name: "Camera 3",
-    location: "Parking Lot"
+    name: "Cam 3",
   }
 ];

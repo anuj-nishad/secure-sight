@@ -8,7 +8,6 @@ async function createCamera() {
       db.camera.create({
         data: {
           name: camera.name,
-          location: camera.location,
         },
       })
     )
@@ -20,7 +19,7 @@ async function createIncident() {
     incidents.map(async (incident) => {
       const camera = await db.camera.findFirst({
         where: {
-          location: incident.location,
+          name : incident.cameraName,
         },
       });
 
@@ -32,6 +31,7 @@ async function createIncident() {
       await db.incident.create({
         data: {
           cameraId: camera.id,
+          cameraName: incident.cameraName,
           location: incident.location,
           thumbnailUrl: incident.thumbnailUrl,
           videoUrl: incident.videoUrl,
@@ -52,10 +52,10 @@ async function seed() {
 
 seed()
   .then(() => {
-    console.log("✅ All seeding done.");
+    console.log("All seeding done.");
     process.exit(0);
   })
   .catch((err) => {
-    console.error("❌ Seeding failed:", err);
+    console.error("Seeding failed:", err);
     process.exit(1);
   });
