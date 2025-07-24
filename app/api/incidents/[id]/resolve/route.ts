@@ -3,9 +3,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function PATCH(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  context: unknown,
 ) {
-  const { id } = params;
+  const { id } = (context as { params: { id: string } }).params;
 
   const existing = await db.incident.findUnique({ where: { id } });
 
