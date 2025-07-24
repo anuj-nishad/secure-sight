@@ -100,7 +100,7 @@ Run the provided `prisma/seed.ts` file to generate demo data:
 ## 📸 Demo
 
 ```text
-Live Demo: https://secure-sight.vercel.app
+Live Demo: https://secure-sight-steel.vercel.app
 ```
 
 ---
